@@ -48,6 +48,47 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         
+        /* Dark mode overrides */
+        .dark-mode {
+            background-color: #0a0f1a;
+            color: #e5e7eb;
+        }
+        .dark-mode.bg-gray-100 { background-color: #0a0f1a !important; }
+        .dark-mode .bg-white { background-color: #0f172a !important; }
+        .dark-mode .bg-gray-100 { background-color: #1f2937 !important; color: #e5e7eb !important; }
+        .dark-mode .bg-gray-200 { background-color: #1f2937 !important; color: #e5e7eb !important; }
+        .dark-mode .bg-gray-50 { background-color: #111827 !important; color: #e5e7eb !important; }
+        .dark-mode .bg-blue-50 { background-color: #1d2a44 !important; color: #e5e7eb !important; }
+        .dark-mode .bg-blue-100 { background-color: #223456 !important; color: #e5e7eb !important; }
+        .dark-mode .tips-panel { background-color: #0b1324 !important; color: #f8fafc !important; }
+        .dark-mode .tips-panel h5 { color: #ffffff !important; }
+        .dark-mode .tips-panel ul li { color: #e0e7ff !important; }
+        .dark-mode .bg-orange-100 { background-color: #fbbf24 !important; color: #0a1020 !important; }
+        .dark-mode .bg-purple-100 { background-color: #d8b4fe !important; color: #170822 !important; }
+        .dark-mode .bg-blue-100 { background-color: #bcd7ff !important; color: #0b1220 !important; }
+        .dark-mode .bg-yellow-100 { background-color: #fef08a !important; color: #0b1220 !important; }
+        .dark-mode .bg-green-200 { background-color: #34d399 !important; color: #052316 !important; }
+        .dark-mode .thumb-key { box-shadow: 0 6px 14px rgba(52, 211, 153, 0.25); }
+        .dark-mode .combo-key { border-color: #facc15 !important; }
+        .dark-mode .key {
+            box-shadow: 0 8px 18px -3px rgba(0, 0, 0, 0.45);
+        }
+        .dark-mode .key:hover {
+            box-shadow: 0 10px 20px -4px rgba(0, 0, 0, 0.55);
+        }
+        .dark-mode .tooltip-text {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .dark-mode .text-gray-900,
+        .dark-mode .text-gray-800,
+        .dark-mode .text-gray-600 { color: #cbd5e1 !important; }
+        .dark-mode .text-gray-500 { color: #cbd5e1 !important; }
+        .dark-mode .border-gray-200 { border-color: #1f2937 !important; }
+        .dark-mode .border-gray-300 { border-color: #1f2937 !important; }
+        .dark-mode .layer-btn:not(.bg-blue-500) { background-color: #111827 !important; color: #9ca3af !important; }
+        .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 { color: #e5e7eb !important; }
+        
         .home-row {
             position: relative;
         }
@@ -170,24 +211,30 @@
 	        <!-- Mode Selector -->
 	        <div class="mb-8 text-center">
 	            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 inline-block">
-	                <p class="text-sm text-gray-600 mb-3">Mode:</p>
+	                <p class="text-sm text-gray-600 mb-3 flex items-center justify-center gap-3">
+	                    <span>Mode:</span>
+	                    <button @click="toggleDarkMode" class="px-3 py-1 rounded border text-sm"
+	                        :class="darkMode ? 'bg-slate-800 text-white border-slate-600' : 'bg-gray-200 text-gray-800 border-gray-300'">
+	                        {{ darkMode ? 'Dark Mode' : 'Light Mode' }}
+	                    </button>
+	                </p>
 	                <div class="flex justify-center gap-2 flex-wrap">
-		                    <span v-if="mode === 'macos'" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">
-		                        Current: MacOS Mode
-		                    </span>
-		                    <a v-else href="./" class="px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm">
-		                        MacOS Mode
-		                    </a>
+	                    <span v-if="mode === 'macos'" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">
+	                        Current: MacOS Mode
+	                    </span>
+	                    <a v-else href="./" class="px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm">
+	                        MacOS Mode
+	                    </a>
 
-		                    <span v-if="mode === 'windows'" class="px-3 py-2 bg-slate-700 text-white rounded text-sm">
-		                        Current: Windows Mode
-		                    </span>
-		                    <a v-else href="./?mode=windows" class="px-3 py-2 bg-slate-700 text-white rounded hover:bg-slate-800 transition-colors text-sm">
-		                        Windows Mode
-		                    </a>
-		                </div>
-		            </div>
-		        </div>
+	                    <span v-if="mode === 'windows'" class="px-3 py-2 bg-slate-700 text-white rounded text-sm">
+	                        Current: Windows Mode
+	                    </span>
+	                    <a v-else href="./?mode=windows" class="px-3 py-2 bg-slate-700 text-white rounded hover:bg-slate-800 transition-colors text-sm">
+	                        Windows Mode
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
 	        
 	        <!-- Layer Selector -->
 	        <div class="flex flex-wrap justify-center gap-2 mb-8">
@@ -337,15 +384,15 @@
                 </div>
 
                 <!-- Usage Tips -->
-                <div class="mt-6 p-3 bg-blue-50 rounded-lg">
+                <div class="mt-6 p-3 bg-blue-50 rounded-lg tips-panel">
                     <h5 class="font-medium text-blue-800 mb-2">💡 Combo Tips for Small Hands</h5>
-	                    <ul class="text-sm text-blue-700 space-y-1">
-	                        <li>• Press keys simultaneously - no need to hold and press</li>
-	                        <li>• Q+W is easier than reaching for Escape key</li>
-	                        <li>• X+C and C+V combos are faster than {{ shortcutKeyName }}+X/C shortcuts</li>
-	                        <li>• All combos use adjacent or nearby keys for comfort</li>
-	                        <li>• Yellow highlighted keys show which keys have combos</li>
-	                    </ul>
+		                <ul class="text-sm text-blue-700 space-y-1">
+		                    <li>• Press keys simultaneously - no need to hold and press</li>
+		                    <li>• Q+W is easier than reaching for Escape key</li>
+		                    <li>• X+C and C+V combos are faster than {{ shortcutKeyName }}+X/C shortcuts</li>
+		                    <li>• All combos use adjacent or nearby keys for comfort</li>
+		                    <li>• Yellow highlighted keys show which keys have combos</li>
+		                </ul>
                 </div>
             </div>
         </div>
@@ -534,14 +581,16 @@
                         },
 	                        tooltips: {},
 	                        layerData: {}
-	                    },
-	                    currentLayer: 'base',
-	                    showCombos: false,
-	                    mode,
-	                    rawConfig: null
-	                }
-	            },
+                    },
+                    currentLayer: 'base',
+                    showCombos: false,
+                    mode,
+                    rawConfig: null,
+                    darkMode: false
+                }
+            },
             async mounted() {
+                this.initializeTheme();
                 await this.loadConfig();
                 this.updateTooltips();
             },
@@ -557,12 +606,31 @@
 	                        return 'Home row modifiers: Win (pinky) | Alt (ring) | Ctrl (middle) | Shift (index)';
 	                    }
 	                    return 'Home row modifiers: Cmd (pinky) | Opt (ring) | Ctrl (middle) | Shift (index)';
-	                }
-	            },
-	            methods: {
-	                deepClone(obj) {
-	                    return JSON.parse(JSON.stringify(obj));
-	                },
+                }
+            },
+            methods: {
+                initializeTheme() {
+                    const saved = localStorage.getItem('theme');
+                    if (saved === 'dark') this.darkMode = true;
+                    if (saved === 'light') this.darkMode = false;
+                    this.applyTheme();
+                },
+                applyTheme() {
+                    if (this.darkMode) {
+                        document.body.classList.add('dark-mode');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                        localStorage.setItem('theme', 'light');
+                    }
+                },
+                toggleDarkMode() {
+                    this.darkMode = !this.darkMode;
+                    this.applyTheme();
+                },
+                deepClone(obj) {
+                    return JSON.parse(JSON.stringify(obj));
+                },
 	                mapModeText(text) {
 	                    if (typeof text !== 'string') return text;
 
