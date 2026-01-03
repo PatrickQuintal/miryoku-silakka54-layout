@@ -86,8 +86,25 @@
         .dark-mode .text-gray-500 { color: #cbd5e1 !important; }
         .dark-mode .border-gray-200 { border-color: #1f2937 !important; }
         .dark-mode .border-gray-300 { border-color: #1f2937 !important; }
-        .dark-mode .layer-btn:not(.bg-blue-500) { background-color: #111827 !important; color: #9ca3af !important; }
+        .dark-mode .layer-btn { color: #f9fafb !important; box-shadow: 0 6px 14px rgba(0,0,0,0.35); }
+        .dark-mode .layer-base { background-color: #4b5563 !important; color: #f9fafb !important; }
+        .dark-mode .layer-media { background-color: #b91c1c !important; color: #fdfdfd !important; }
+        .dark-mode .layer-nav { background-color: #1d4ed8 !important; color: #f5f8ff !important; }
+        .dark-mode .layer-mouse { background-color: #6d28d9 !important; color: #f7e9ff !important; }
+        .dark-mode .layer-sym { background-color: #0369a1 !important; color: #e5f6ff !important; }
+        .dark-mode .layer-num { background-color: #d97706 !important; color: #fff !important; }
+        .dark-mode .layer-fun { background-color: #be185d !important; color: #ffe6f1 !important; }
+        .dark-mode .layer-gaming { background-color: #4d7c0f !important; color: #f0ffe0 !important; }
         .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 { color: #e5e7eb !important; }
+        /* Thumb key palette to match layers */
+        .thumb-media { background-color: #ef4444 !important; color: #fff !important; }
+        .thumb-nav { background-color: #2563eb !important; color: #fff !important; }
+        .thumb-mouse { background-color: #7c3aed !important; color: #fff !important; }
+        .thumb-sym { background-color: #0284c7 !important; color: #fff !important; }
+        .thumb-num { background-color: #d97706 !important; color: #fff !important; }
+        .thumb-fun { background-color: #ec4899 !important; color: #fff !important; }
+        .thumb-gaming { background-color: #4d7c0f !important; color: #fff !important; }
+        .thumb-key .mod-label { color: #ffffff !important; }
         
         .home-row {
             position: relative;
@@ -130,9 +147,21 @@
             }
         }
         .layer-active {
-            background-color: #3b82f6 !important;
-            color: white !important;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9) inset, 0 0 0 1px rgba(0, 0, 0, 0.2);
+            filter: brightness(1.05);
         }
+        .layer-btn {
+            color: #0b1019;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+        }
+        .layer-base { background-color: #9ca3af !important; color: #0b1019 !important; }
+        .layer-media { background-color: #ef4444 !important; color: #fff !important; }
+        .layer-nav { background-color: #2563eb !important; color: #fff !important; }
+        .layer-mouse { background-color: #7c3aed !important; color: #fff !important; }
+        .layer-sym { background-color: #0ea5e9 !important; color: #05202e !important; }
+        .layer-num { background-color: #f59e0b !important; color: #111827 !important; }
+        .layer-fun { background-color: #ec4899 !important; color: #fff !important; }
+        .layer-gaming { background-color: #84cc16 !important; color: #0f1a02 !important; }
         .key-label {
             display: flex;
             flex-direction: column;
@@ -278,11 +307,11 @@
 	        
 	        <!-- Layer Selector -->
 	        <div class="flex flex-wrap justify-center gap-2 mb-8">
-	            <button 
+            <button 
                 v-for="layer in config.layers" 
                 :key="layer.id"
                 @click="showLayer(layer.id)" 
-                :class="['layer-btn px-4 py-2 rounded', currentLayer === layer.id ? 'bg-blue-500 text-white' : 'bg-gray-300']"
+                :class="['layer-btn px-4 py-2 rounded', 'layer-' + layer.id, currentLayer === layer.id ? 'layer-active' : '']"
             >
                 {{ layer.name }}
             </button>

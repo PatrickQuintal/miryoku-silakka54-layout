@@ -43,7 +43,7 @@
       "active": false
     }
   ],
-    "keyboardLayout": {
+  "keyboardLayout": {
     "leftKeys": [
       {
         "id": "L01",
@@ -169,15 +169,15 @@
     "leftThumbKeys": [
       {
         "id": "LT1",
-        "class": "bg-green-200 thumb-key"
+        "class": "thumb-key thumb-media"
       },
       {
         "id": "LT3",
-        "class": "bg-green-200 thumb-key"
+        "class": "thumb-key thumb-mouse"
       },
       {
         "id": "LT2",
-        "class": "bg-green-200 thumb-key"
+        "class": "thumb-key thumb-nav"
       }
     ],
     "rightKeys": [
@@ -305,15 +305,15 @@
     "rightThumbKeys": [
       {
         "id": "RT3",
-        "class": "bg-green-200 thumb-key"
+        "class": "thumb-key thumb-sym"
       },
       {
         "id": "RT2",
-        "class": "bg-green-200 thumb-key"
+        "class": "thumb-key thumb-num"
       },
       {
         "id": "RT1",
-        "class": "bg-green-200 thumb-key"
+        "class": "thumb-key thumb-fun"
       }
     ]
   },
