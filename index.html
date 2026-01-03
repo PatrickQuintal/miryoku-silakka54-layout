@@ -9,27 +9,37 @@
     <style>
         /* Mobile-first responsive design */
         .key {
-            min-width: 2.5rem;
-            min-height: 2.5rem;
+            min-width: 3rem;
+            min-height: 3rem;
             transition: all 0.2s ease;
-            font-size: 0.6rem;
+            font-size: 0.9rem;
+        }
+        .key .text-xs {
+            font-size: 0.95rem;
+            line-height: 1.25;
         }
         
         /* Tablet and larger */
         @media (min-width: 768px) {
             .key {
-                min-width: 3rem;
-                min-height: 3rem;
-                font-size: 0.7rem;
+                min-width: 3.75rem;
+                min-height: 3.75rem;
+                font-size: 1.05rem;
+            }
+            .key .text-xs {
+                font-size: 1.05rem;
             }
         }
         
         /* Desktop */
         @media (min-width: 1024px) {
             .key {
-                min-width: 3.5rem;
-                min-height: 3.5rem;
-                font-size: 0.75rem;
+                min-width: 4.25rem;
+                min-height: 4.25rem;
+                font-size: 1.15rem;
+            }
+            .key .text-xs {
+                font-size: 1.15rem;
             }
         }
         
@@ -90,19 +100,19 @@
             line-height: 1.2;
         }
         .mod-label {
-            font-size: 0.5rem;
+            font-size: 0.75rem;
             color: #6b7280;
         }
         
         @media (min-width: 768px) {
             .mod-label {
-                font-size: 0.55rem;
+                font-size: 0.85rem;
             }
         }
         
         @media (min-width: 1024px) {
             .mod-label {
-                font-size: 0.6rem;
+                font-size: 0.95rem;
             }
         }
         .tooltip {
