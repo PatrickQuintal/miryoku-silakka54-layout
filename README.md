@@ -4,6 +4,16 @@
 
 A comprehensive implementation suite for the Miryoku keyboard layout system adapted to the Silakka54 split keyboard, featuring **three synchronized approaches**: firmware-based (Vial - ✅ Tested), software-based (Kanata - ⚠️ Untested/WIP), and educational visualization (Web UI - ✅ Ready).
 
+## Quick Summary (Latest Changes)
+
+- **Switched to QWERTY base** (while keeping Miryoku-style thumb LTs + home-row mod-taps).
+- **Added OS mode toggle** on `-/_` (tap `-`, hold toggles Ctrl↔GUI globally).
+- **Added Gaming layer** (plain modifiers, combos auto-off/on) and show it **only in Windows Mode**.
+- **Web cheat sheet now has two modes** at the top: **MacOS Mode** (Cmd/Opt labels) and **Windows Mode** (Win/Ctrl labels).
+  - MacOS: `http://localhost:3000/`
+  - Windows: `http://localhost:3000/?mode=windows`
+- **Source of truth**: `vial/miryoku-silakka54-vial-config-qwerty-os-toggle-gaming-auto-combo.vil` → `app.json` → `index.html`
+
 ## Overview
 
 This project provides both educational documentation and an interactive web-based visualizer for understanding and implementing the ergonomic Miryoku layout on a 54-key split keyboard. Miryoku is a modern keyboard layout system that reduces a full keyboard's functionality to just 36 keys through intelligent layering and home row modifiers.
