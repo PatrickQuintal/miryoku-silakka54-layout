@@ -1,0 +1,13 @@
+{
+  "name": "miryoku-silakka54-layout",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Static visualizer for Miryoku Silakka54 layout",
+  "scripts": {
+    "test:ui": "playwright test",
+    "test:ui:headed": "playwright test --headed --project=chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1"
+  }
+}

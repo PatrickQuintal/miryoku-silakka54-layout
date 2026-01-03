@@ -138,22 +138,62 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            height: 100%;
             line-height: 1.2;
         }
+        .key-label.case-top {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            height: 100%;
+            padding: 10px 8px 18px 8px;
+            text-align: center;
+        }
+        .key-label.case-top .case-label {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.15;
+            opacity: 0.9;
+        }
+        .key-label.case-top .main-label {
+            font-size: 1.12rem;
+            line-height: 1.25;
+        }
+        .key-label.case-top .mod-label {
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            right: 0;
+            margin-top: 0;
+        }
+        /* Special spacing for ; / Win key (R22) to improve readability */
+        [data-key="R22"] .key-label.case-top {
+            padding-top: 4px;
+            padding-bottom: 26px;
+            justify-content: flex-start;
+        }
+        [data-key="R22"] .key-label.case-top .mod-label {
+            bottom: 4px;
+            font-size: 0.9rem;
+        }
         .mod-label {
-            font-size: 0.75rem;
-            color: #6b7280;
+            font-size: 0.82rem;
+            color: #4b5563;
         }
         
         @media (min-width: 768px) {
             .mod-label {
-                font-size: 0.85rem;
+                font-size: 0.92rem;
             }
         }
         
         @media (min-width: 1024px) {
             .mod-label {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
         }
         .tooltip {
