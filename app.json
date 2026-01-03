@@ -43,7 +43,7 @@
       "active": false
     }
   ],
-  "keyboardLayout": {
+    "keyboardLayout": {
     "leftKeys": [
       {
         "id": "L01",
@@ -172,11 +172,11 @@
         "class": "bg-green-200 thumb-key"
       },
       {
-        "id": "LT2",
+        "id": "LT3",
         "class": "bg-green-200 thumb-key"
       },
       {
-        "id": "LT3",
+        "id": "LT2",
         "class": "bg-green-200 thumb-key"
       }
     ],
@@ -348,7 +348,7 @@
   },
   "layerData": {
     "base": {
-      "L01": "<div class=\"key-label case-top\"><span class=\"case-label\">~</span><span class=\"main-label\">`</span></div>",
+      "L01": "<div class=\"key-label case-top\"><span class=\"case-label\">~</span><span class=\"main-label\">`</span><span class=\"mod-label\">Mac</span></div>",
       "L02": "<div class=\"key-label case-top\"><span class=\"case-label\">!</span><span class=\"main-label\">1</span></div>",
       "L03": "<div class=\"key-label case-top\"><span class=\"case-label\">@</span><span class=\"main-label\">2</span></div>",
       "L04": "<div class=\"key-label case-top\"><span class=\"case-label\">#</span><span class=\"main-label\">3</span></div>",
@@ -366,7 +366,7 @@
       "L24": "<div class=\"key-label\">D<br><span class=\"mod-label\">Ctrl</span></div>",
       "L25": "<div class=\"key-label\">F<br><span class=\"mod-label\">Shift</span></div>",
       "L26": "G",
-      "L31": "<div class=\"key-label case-top\"><span class=\"case-label\">:</span><span class=\"main-label\">;</span></div>",
+      "L31": "<div class=\"key-label case-top\"><span class=\"case-label\">\"</span><span class=\"main-label\">'</span></div>",
       "L32": "Z",
       "L33": "X",
       "L34": "C",
@@ -380,7 +380,7 @@
       "R04": "<div class=\"key-label case-top\"><span class=\"case-label\">*</span><span class=\"main-label\">8</span></div>",
       "R03": "<div class=\"key-label case-top\"><span class=\"case-label\">(</span><span class=\"main-label\">9</span></div>",
       "R02": "<div class=\"key-label case-top\"><span class=\"case-label\">)</span><span class=\"main-label\">0</span></div>",
-      "R01": "<div class=\"key-label case-top\"><span class=\"case-label\">_</span><span class=\"main-label\">-</span><span class=\"mod-label\">OS</span></div>",
+      "R01": "<div class=\"key-label case-top\"><span class=\"case-label\">_</span><span class=\"main-label\">-</span><span class=\"mod-label\">Win</span></div>",
       "R16": "Y",
       "R15": "U",
       "R14": "I",
@@ -772,13 +772,13 @@
       "R04": "<div class=\"key-label\">8<br><span class=\"mod-label\">*</span></div>",
       "R03": "<div class=\"key-label\">9<br><span class=\"mod-label\">(</span></div>",
       "R02": "<div class=\"key-label\">0<br><span class=\"mod-label\">)</span></div>",
-      "R01": "<div class=\"key-label\">-<br><span class=\"mod-label\">_</span><span class=\"mod-label\">OS</span></div>",
+      "R01": "<div class=\"key-label\">-<br><span class=\"mod-label\">_</span><span class=\"mod-label\">Win</span></div>",
       "R16": "Y",
       "R15": "U",
       "R14": "I",
       "R13": "O",
       "R12": "P",
-      "R11": "<div class=\"key-label\">=<br><span class=\"mod-label\">+</span><span class=\"mod-label\">Base</span></div>",
+      "R11": "<div class=\"key-label\">=<br><span class=\"mod-label\">+</span><span class=\"mod-label\">Game</span></div>",
       "R26": "H",
       "R25": "J",
       "R24": "K",
