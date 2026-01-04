@@ -113,7 +113,7 @@
       {
         "id": "L22",
         "row": 2,
-        "class": "bg-blue-100 home-row"
+        "class": "bg-gray-100"
       },
       {
         "id": "L23",
@@ -169,7 +169,7 @@
     "leftThumbKeys": [
       {
         "id": "LT1",
-        "class": "thumb-key thumb-media"
+        "class": "thumb-key thumb-esc"
       },
       {
         "id": "LT3",
@@ -264,7 +264,7 @@
       {
         "id": "R22",
         "row": 2,
-        "class": "bg-blue-100 home-row"
+        "class": "bg-gray-100"
       },
       {
         "id": "R21",
@@ -318,17 +318,17 @@
     ]
   },
   "tooltips": {
-    "L22": "A key | Tap Dance: A/GUI (190ms timing)",
+    "L22": "A key",
     "L23": "S key | Hold: Alt modifier (175ms)",
     "L24": "D key | Hold: Control modifier (175ms)",
     "L25": "F key | Hold: Shift modifier (175ms)",
     "R25": "J key | Hold: Shift modifier (175ms)",
     "R24": "K key | Hold: Control modifier (175ms)",
     "R23": "L key | Hold: Alt modifier (175ms)",
-    "R22": "Semicolon key | Tap Dance: ;/GUI (200ms timing)",
+    "R22": "Semicolon key",
     "R01": "Minus key | Tap: -/_ | Hold: Toggle Ctrl\u2194GUI (600ms)",
     "R11": "Equals key | Tap: =/+ | Hold: Disable combos + enter Gaming (700ms)",
-    "LT1": "Escape key | Hold: Media layer (Layer 1)",
+    "LT1": "Escape key | Tap: Esc | Hold: GUI (250ms tap-hold)",
     "LT2": "Space key | Hold: Navigation layer (Layer 2)",
     "LT3": "Tab key | Hold: Mouse layer (Layer 3)",
     "RT1": "Delete key | Hold: Function layer (Layer 6)",
@@ -361,7 +361,7 @@
       "L15": "R",
       "L16": "T",
       "L21": "<div class=\"key-label case-top\"><span class=\"case-label\">{</span><span class=\"main-label\">[</span></div>",
-      "L22": "<div class=\"key-label\">A<br><span class=\"mod-label\">GUI</span></div>",
+      "L22": "A",
       "L23": "<div class=\"key-label\">S<br><span class=\"mod-label\">Alt</span></div>",
       "L24": "<div class=\"key-label\">D<br><span class=\"mod-label\">Ctrl</span></div>",
       "L25": "<div class=\"key-label\">F<br><span class=\"mod-label\">Shift</span></div>",
@@ -372,7 +372,7 @@
       "L34": "C",
       "L35": "V",
       "L36": "B",
-      "LT1": "<div class=\"key-label\">Esc<br><span class=\"mod-label\">Media</span></div>",
+      "LT1": "<div class=\"key-label\">Esc<br><span class=\"mod-label\">GUI</span></div>",
       "LT2": "<div class=\"key-label\">Space<br><span class=\"mod-label\">Nav</span></div>",
       "LT3": "<div class=\"key-label\">Tab<br><span class=\"mod-label\">Mouse</span></div>",
       "R06": "<div class=\"key-label case-top\"><span class=\"case-label\">^</span><span class=\"main-label\">6</span></div>",
@@ -391,7 +391,7 @@
       "R25": "<div class=\"key-label\">J<br><span class=\"mod-label\">Shift</span></div>",
       "R24": "<div class=\"key-label\">K<br><span class=\"mod-label\">Ctrl</span></div>",
       "R23": "<div class=\"key-label\">L<br><span class=\"mod-label\">Alt</span></div>",
-      "R22": "<div class=\"key-label case-top\"><span class=\"case-label\">:</span><span class=\"main-label\">;</span><span class=\"mod-label\">GUI</span></div>",
+      "R22": "<div class=\"key-label case-top\"><span class=\"case-label\">:</span><span class=\"main-label\">;</span></div>",
       "R21": "<div class=\"key-label case-top\"><span class=\"case-label\">}</span><span class=\"main-label\">]</span></div>",
       "R36": "N",
       "R35": "M",
